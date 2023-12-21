@@ -504,14 +504,7 @@ video{
 }
 
 @media (orientation:portrait){
-     
-    .insights img{
- width: 12.5vh;
- border-radius: 12.5vh;
- height: 25vh;
- object-fit: cover;
- border: rgb(138, 37, 138) solid thin;
-    }
+    
 
     .insights img.t3{
     margin-left: 20%;
