@@ -505,6 +505,13 @@ video{
 
 @media (orientation:portrait){
      
+    .insights img{
+ width: 10vh;
+ border-radius: 10vh;
+ height: 20vh;
+ object-fit: cover;
+ border: rgb(138, 37, 138) solid thin;
+    }
     
 
     .cllg{
