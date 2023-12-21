@@ -512,7 +512,20 @@ video{
  object-fit: cover;
  border: rgb(138, 37, 138) solid thin;
     }
-    
+
+    .insights img.t3{
+    margin-left: 20%;
+}
+
+.insights img.t4{
+    margin-left: 1%;
+    margin-right: 20%
+}
+
+.insights img.t1{
+    margin-left: 1%;
+    margin-right: 20%
+}
 
     .cllg{
         width: 100%;
