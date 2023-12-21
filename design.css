@@ -312,7 +312,7 @@ iframe{
 .carriage{
     width: 40%;
     float: left;
-    min-width: 350px;
+    min-width: 300px;
     height: 100vh;
 }
 
