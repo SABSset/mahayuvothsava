@@ -415,10 +415,6 @@ img.icon{
     color:rgb(83, 115, 255);
   }
 
-  .twist-para{
-    display: none;                       /*twisty*/
-  }
-
   input{
     line-height: 1.8em;
   }
