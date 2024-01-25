@@ -7,10 +7,13 @@ body{
     margin: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
 .body{
     height:100vh;
     overflow-y: scroll;
-    font-family:  Verdana, Tahoma, arial, 'Segoe UI', Geneva, sans-serif ;
+    font-family:  'montserrat', Arial, Helvetica, sans-serif ;
     overflow-x: hidden;
     font-size: 20px;
     scroll-behavior: smooth;
@@ -36,7 +39,7 @@ body{
 }
 
 .cover{
-    background-color: rgba(58, 57, 56, 0.411);
+    background-color: rgba(58, 57, 56, 0.4);
     width:100%;
     height: 100%;
     position: absolute;
@@ -45,7 +48,7 @@ body{
 }
 .title{
     margin-left:10px;
-    width: clamp(300px, 80%, 800px);
+    width: clamp(260px, 80%, 800px);
     height: fit-content;
     text-transform: capitalize;
     font-family:'Courier New', Courier, monospace;
@@ -82,7 +85,6 @@ body{
     text-decoration: none;
     padding: 10px;
     border-radius: 5px;
-    transition: all linear .5s;
 }
 
 .hero ul li a:hover{
@@ -95,10 +97,10 @@ body{
 
 .tag{
     position: absolute;
-    width: clamp(250px, 40%, 800px);
+    width: clamp(260px, 70%, 500px);
     right:0%;
     top:28%;
-    color: aliceblue;
+    color: rgb(233, 233, 233);
     font-family: 'Montserrat', sans-serif;
     opacity: 0; /* Initially hidden */
     animation: fadeIn 1.4s linear 0.5s forwards;
@@ -121,9 +123,11 @@ body{
   }
 
 .action{
-    background-color: rgb(161, 13, 219);
+    background-color: rgb(240, 240, 68);
+   
     text-decoration: none;
-    color:rgb(191, 200, 218);
+    color:rgb(46, 46, 46);
+    border: rgb(240, 240, 68) medium solid;
 }
 
 a{
@@ -139,15 +143,20 @@ p.action{
 }
 
 .hero ul li a.action{
-    color: rgb(161, 13, 219);
+    border: none;
+    color: rgb(240, 240, 68);
     background-color: transparent;
 }
 
 .action:hover, .action:active, .hero ul li a.action:hover, .hero ul li a.action:active{
     cursor:pointer;
-    background-color: rgb(0, 0, 0);
+    background-color: transparent;
     border-bottom: none;
     color: rgb(255, 255, 255);
+}
+
+.action:hover, .action:active{
+    border: rgb(240, 240, 68) medium solid;
 }
 
 .sabs{
@@ -189,7 +198,8 @@ p.build{
     margin-top: 20px;
     height: fit-content;
     align-self: center;
-    padding: 5px;
+    padding: 15px;
+    box-sizing: border-box;
     border-top: black thin solid;
     border-bottom: black thin solid;    
     text-align: justify;
@@ -211,7 +221,7 @@ iframe{
 }
 
 .fest h2, .fest h1, .fest h3{
-    font-family:'Courier New', Courier, monospace;
+    font-family:arial,'Courier New', Courier, monospace;
     text-transform: capitalize;
 }
 
@@ -232,7 +242,8 @@ iframe{
 
 .pic{
     height: 300px;
-    width: 80%;
+    width:clamp(270px,90%,800px);
+
     margin:auto;
     text-align: center;
     display: flex;
@@ -252,6 +263,8 @@ iframe{
     text-align: justify;
     padding: 10px;
     max-width: 600px;
+    width:90%;
+    min-width: 270px;
     align-self:center;
 }
 
@@ -268,7 +281,7 @@ iframe{
 }
 
 .info-fest a{
-    color: red;
+    color: rgb(87, 108, 226);
 }
 
 .name{
@@ -277,18 +290,26 @@ iframe{
 
 .bold{
     text-transform: uppercase;
-    color: rgb(32, 35, 247);
+    color: rgb(179, 49, 49);
 }
 
 .insights{
     width:100%;
     background-color: rgb(207, 214, 255);
-    padding: 5px;
-    height:95vh ;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.insights-in{
+    width:clamp(260px,90%, 1100px);
+    margin: auto;
+    display: grid;
+    grid-gap: 1.5em;
+    grid-template-columns: repeat(auto-fit, minmax(250px,2fr));
 }
 
 .insights img{
- width: 15vh;
+ width: clamp(80px,25%,120px);
  border-radius: 15vh;
  height: 30vh;
  object-fit: cover;
@@ -309,18 +330,8 @@ iframe{
     margin-right: 30%
 }
 
-.carriage{
-    width: 40%;
-    float: left;
-    min-width: 300px;
-    height: 100vh;
-}
-
 .fest-text{
     height: 50vh;
-    width: 40%;
-    float: right;
-    min-width: 350px;
 }
 
 .fest-text p{
@@ -337,12 +348,13 @@ img.icon{
 }
 
 .down{
-    width: 10vw;
+    width: fit-content;
     text-align: center;
     color: rgba(0, 0, 0, 0.678);
     position: absolute;
-    padding: 5px;
+    padding: 10px;
     border-radius: 4px;
+    box-sizing: border-box;
     top: 90%;
     background-color: rgba(255, 255, 255, 0.651);
     left: 45vw;   
@@ -387,51 +399,6 @@ img.icon{
     animation: move 2s ease-in-out infinite alternate;
   }
 
-  #twist-check{
-    display: none;
-  }
-
-  #twist-check:checked~.twist{
-    left:10vw;
-  }
-
-  .twist{
-    height: 80vh;
-    position: fixed;
-    text-align: center;
-    z-index: 5;
-    font-size: 18px;
-    font-family:'Courier New', Courier, monospace;
-    text-transform: capitalize;
-    top:10vh;
-    left:-150vw;
-    background-color: rgba(0, 0, 0, 0.863);
-    color: aliceblue;
-    width: 80vw;
-    transition: all ease-in-out 1s;
-  }
-
-  .twist-name{
-    color:rgb(83, 115, 255);
-  }
-
-  input{
-    line-height: 1.8em;
-  }
-
-  #submit{
-    background-color: rgb(136, 71, 197);
-    line-height: 1.8em;
-    text-transform: uppercase;
-    color:antiquewhite;
-  }
-  
-  .close{
-    font-size: 35px;
-    position: absolute;
-    left: 95%;
-  }
-
   @keyframes move {
     0% {
       transform: translateX(-75%);
@@ -474,15 +441,17 @@ video{
 
 .video{
     text-align: center;
-    width:70vw;
-    margin-left: 2vw;
+    width: 100vw;
+    box-sizing: border-box;
     padding: 10px ;
 }
 
+.footer a{
+    color: rgb(129, 188, 255);
+    text-transform: capitalize ;
+}
+
 @media (max-width: 720px){
-    .insights{
-     height: 185vh;
-    }
 
     .body{
         font-size: 17px;
@@ -500,21 +469,8 @@ video{
 }
 
 @media (orientation:portrait){
+     
     
-
-    .insights img.t3{
-    margin-left: 20%;
-}
-
-.insights img.t4{
-    margin-left: 1%;
-    margin-right: 20%
-}
-
-.insights img.t1{
-    margin-left: 1%;
-    margin-right: 20%
-}
 
     .cllg{
         width: 100%;
@@ -583,9 +539,6 @@ video{
         right:15%;
         top:30%;
     }
-    .insights{
-        height: 160vh;
-       }
 
        .fest-text p{
         width:96%;
